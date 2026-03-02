@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Yongsoo Joo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Yongsoo Joo</h1>
+    <nav>
+      <a href="index.html">Introduction</a>
+      <a href="publication.html">Publication</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="demo.html">Demo</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2 class="research-period">I/O Completion Optimization & Storage Security <span class="period-years">2023 &ndash; present</span></h2>
+
+  <div class="research-card">
+    <h3>DPAS: Dynamic I/O Completion Method for SSDs</h3>
+    <p>
+      Dynamically switches among polling, interrupts, and an adaptive hybrid polling method (PAS)
+      based on CPU contention levels, achieving both prompt and CPU-efficient I/O completion on modern SSDs.
+    </p>
+    <div class="research-highlight">9% YCSB performance improvement on 3D XPoint SSD [USENIX FAST 2026]</div>
+    <ul class="paper-links">
+      <li><a href="https://www.usenix.org/conference/fast26/presentation/seo" target="_blank">FAST 2026</a></li>
+      <li><a href="https://github.com/DongDongJu/DPAS_FAST26" target="_blank">Artifact</a></li>
+      <li><a href="demo.html">Demo</a></li>
+      <li><a href="https://patents.google.com/patent/US11768532B2/en" target="_blank">US Patent 11,768,532</a></li>
+      <li><a href="https://patents.google.com/patent/US20260030187A1/en" target="_blank">US Patent App. 2026/0030187</a></li>
+      <li>KR Patent 10-2919645</li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Virtualized I/O Performance Optimization</h3>
+    <p>
+      Expands the polled I/O path in the Linux kernel to improve I/O performance in virtualized environments,
+      enabling efficient storage access for virtual machines.
+    </p>
+    <div class="research-highlight">Polled I/O path expansion for Linux virtualization [ACM HotStorage 2024]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1145/3655038.3665944" target="_blank">HotStorage 2024</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Ransomware-Proof SSDs</h3>
+    <p>
+      A memory-efficient overwrite detection method that enables SSDs to detect and prevent
+      ransomware encryption attacks at the firmware level.
+    </p>
+    <div class="research-highlight">Memory-efficient overwrite detection at SSD firmware [IEICE 2023]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1587/transinf.2023EDL8019" target="_blank">IEICE 2023</a></li>
+    </ul>
+  </div>
+
+  <h2 class="research-period">I/O Reordering & Mobile Storage <span class="period-years">2015 &ndash; 2020</span></h2>
+
+  <div class="research-card">
+    <h3>I/O Reordering and Interleaving for Application Prefetching</h3>
+    <p>
+      Exploits both I/O reordering and I/O interleaving techniques to optimize application prefetcher design,
+      improving launch performance on storage devices.
+    </p>
+    <div class="research-highlight">Systematic prefetcher optimization via I/O scheduling [ACM TOS 2017]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1145/3024094" target="_blank">ACM TOS 2017</a></li>
+      <li><a href="https://doi.org/10.1587/transinf.2015EDL8125" target="_blank">IEICE 2015</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Mobile Application Loading Optimization</h3>
+    <p>
+      Enlarges I/O request sizes to reduce the number of I/O operations during mobile application loading,
+      accelerating app launch on mobile storage.
+    </p>
+    <div class="research-highlight">Faster mobile app loading via I/O size enlargement [IEEE ESL 2020]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1109/LES.2019.2932108" target="_blank">IEEE ESL 2020</a></li>
+    </ul>
+  </div>
+
+  <h2 class="research-period">SSD Performance & Nonvolatile Memory <span class="period-years">2009 &ndash; 2014</span></h2>
+
+  <div class="research-card">
+    <h3>FAST (Fast Application STarter)</h3>
+    <p>
+      An SSD-aware application launching scheme that overlaps CPU computation with I/O operations.
+      Works on Linux systems without requiring kernel modifications.
+    </p>
+    <div class="research-highlight">28% reduction of application launch time [USENIX FAST 2011]</div>
+    <ul class="paper-links">
+      <li><a href="https://www.usenix.org/conference/fast11/fast-quick-application-launch-solid-state-drives" target="_blank">USENIX FAST 2011</a></li>
+      <li><a href="https://doi.org/10.1007/s11390-012-1259-3" target="_blank">JCST 2012</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>SSD Parallelism Exploitation</h3>
+    <p>
+      An optimized application prefetcher for solid-state drives that exploits internal parallelism of SSDs
+      to accelerate application launches.
+    </p>
+    <div class="research-highlight">37% reduction of prefetcher execution time, 18% reduction of launch time</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1049/el.2011.0042" target="_blank">IET Electronics Letters 2011</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>IOLab: Active Storage Device Evaluation Platform</h3>
+    <p>
+      A virtual machine-based system that evaluates intelligence functions such as prefetching and data deduplication.
+      The platform separates intelligence function implementation from specific operating systems using file-backed virtual disk images.
+    </p>
+    <div class="research-highlight">23% improvement over the Windows prefetcher [IEEE TC 2014]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1109/TC.2013.101" target="_blank">IEEE TC 2014</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Hybrid Solid-State Storage Architecture</h3>
+    <p>
+      Combines phase change memory (PCM) and flash memory in a hybrid solid-state storage architecture
+      to simultaneously improve performance, energy consumption, and device lifetime.
+    </p>
+    <div class="research-highlight">Performance, energy, and lifetime co-optimization for hybrid PCM/Flash storage [HPCA 2010]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1109/HPCA.2010.5416650" target="_blank">HPCA 2010</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Hybrid PRAM and STT-RAM Cache Architecture</h3>
+    <p>
+      Extends phase change RAM (PRAM) cache lifespan by integrating spin transfer torque RAM (STT-RAM) write buffers
+      through threshold-based ownership management.
+    </p>
+    <div class="research-highlight">39% longer lifetime with only 4% larger die area [IEEE CAL 2013]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1109/L-CA.2012.24" target="_blank">IEEE CAL 2013</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Endurance-Aware PCM Cache Design</h3>
+    <p>
+      Addresses phase change memory limitations through write-traffic reduction techniques
+      to improve both energy efficiency and device lifetime.
+    </p>
+    <div class="research-highlight">8% energy saving and 3.8 years of lifetime [DATE 2010]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1109/DATE.2010.5457221" target="_blank">DATE 2010</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Hybrid Disk Block Allocation</h3>
+    <p>
+      Optimizes HDD and flash memory allocation for application launches by pinning selective subsequences
+      to minimize seek time.
+    </p>
+    <div class="research-highlight">31% reduction of launch times with only 26% flash capacity [CODES+ISSS 2009]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1145/1629435.1629486" target="_blank">CODES+ISSS 2009</a></li>
+    </ul>
+  </div>
+
+  <h2 class="research-period">Energy-Efficient Memory Systems <span class="period-years">2002 &ndash; 2008</span></h2>
+
+  <div class="research-card">
+    <h3>Flash Memory Demand Paging & Energy Optimization</h3>
+    <p>
+      Designed energy- and performance-optimized demand paging for OneNAND flash-based execute-in-place systems,
+      including delayed dual buffering to reduce page faults.
+    </p>
+    <div class="research-highlight">Energy and performance co-optimization for OneNAND flash [IEEE TCAD 2008]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1109/TCAD.2008.2006081" target="_blank">IEEE TCAD 2008</a></li>
+      <li><a href="https://doi.org/10.1145/1176254.1176310" target="_blank">CODES+ISSS 2006</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Energy-Aware Data Compression for MLC Flash</h3>
+    <p>
+      Developed energy-optimal prefix coding for multi-level cell flash memory that minimizes
+      programming energy rather than compressed data size, using integer linear programming.
+    </p>
+    <div class="research-highlight">Energy-optimal compression via unequal bit-pattern costs [DAC 2007, ACM TODAES 2008]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1145/1367045.1367052" target="_blank">ACM TODAES 2008</a></li>
+      <li><a href="https://dl.acm.org/doi/10.1145/1278480.1278659" target="_blank">DAC 2007</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Low-Power SDRAM Memory Systems</h3>
+    <p>
+      Explored and reduced energy consumption of off-chip SDRAM memory systems for embedded applications
+      through system-level energy characterization and optimization techniques.
+    </p>
+    <div class="research-highlight">Systematic SDRAM energy exploration and reduction [DAC 2002, ACM TECS 2003]</div>
+    <ul class="paper-links">
+      <li><a href="https://doi.org/10.1145/605459.605464" target="_blank">ACM TECS 2003</a></li>
+      <li><a href="https://doi.org/10.1109/DAC.2002.1012748" target="_blank">DAC 2002</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <div class="container">
+    &copy; 2025 Yongsoo Joo. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

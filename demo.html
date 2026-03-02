@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - Yongsoo Joo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Yongsoo Joo</h1>
+    <nav>
+      <a href="index.html">Introduction</a>
+      <a href="publication.html">Publication</a>
+      <a href="research.html">Research</a>
+      <a href="demo.html" class="active">Demo</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2 class="research-period">DPAS: I/O Completion Optimization for SSDs <span class="period-years">USENIX FAST 2026</span></h2>
+
+  <div class="research-card">
+    <h3>PAS Sleep Duration Tracker</h3>
+    <p>
+      Simulates how the PAS (Per-I/O Adaptive Sleep) algorithm tracks I/O latency
+      and dynamically adjusts sleep duration using binary feedback (UNDER/OVER).
+      Visualizes the convergence behavior with various I/O trace patterns.
+    </p>
+    <div class="research-highlight">Adjustment rate tuning, rule frequency analysis, and convergence tracking</div>
+    <ul class="paper-links">
+      <li><a href="demo/pas_sim.html" target="_blank">Launch Simulator</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>PAS I/O Completion Emulator</h3>
+    <p>
+      Emulates how sleep misprediction affects application-perceived I/O latency.
+      Shows the interplay between genuine device latency, requested sleep, actual wake time
+      (including context-switch overhead), and the resulting perceived latency.
+    </p>
+    <div class="research-highlight">Sleep misprediction and app-perceived latency visualization</div>
+    <ul class="paper-links">
+      <li><a href="demo/pas_emulator.html" target="_blank">Launch Emulator</a></li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>LHP I/O Completion Emulator</h3>
+    <p>
+      Demonstrates the "latency shelving" problem in the LHP (Latency-based Hybrid Polling) method,
+      where oversleep causes inflated latency measurements that feed back into higher sleep predictions.
+      Useful for comparing against PAS/DPAS behavior.
+    </p>
+    <div class="research-highlight">Latency shelving visualization and comparison baseline for DPAS</div>
+    <ul class="paper-links">
+      <li><a href="demo/LHP_emulator.html" target="_blank">Launch Emulator</a></li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666;">
+    Source code: <a href="https://github.com/DongDongJu/DPAS_FAST26" target="_blank">github.com/DongDongJu/DPAS_FAST26</a>
+  </p>
+
+</main>
+
+<footer>
+  <div class="container">
+    &copy; 2025 Yongsoo Joo. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
