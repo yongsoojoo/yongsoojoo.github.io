@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yongsoo Joo - Kookmin University</title>
+  <title>Memory &amp; Storage Laboratory - Kookmin University</title>
+  <meta name="description" content="Memory &amp; Storage Laboratory (M&amp;S Lab), School of Software, Kookmin University. Research on I/O completion optimization, storage security, virtualized I/O, and energy-efficient memory and storage systems.">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7QXWDGY8V"></script>
   <script>
@@ -18,76 +19,174 @@
 
 <header>
   <div class="container">
-    <h1>Yongsoo Joo</h1>
+    <div class="brand">
+      <a href="index.html">
+        <span class="brand-title">Memory &amp; Storage Laboratory</span>
+        <span class="brand-sub">Kookmin University</span>
+      </a>
+    </div>
     <nav>
-      <a href="index.html" class="active">Introduction</a>
-      <a href="publication.html">Publication</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="members.html">Members</a>
       <a href="research.html">Research</a>
+      <a href="publication.html">Publications</a>
       <a href="demo.html">Demo</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
+<main class="home">
 
-  <div class="profile">
-    <img class="profile-photo" src="img/profile.jpg" alt="Yongsoo Joo">
-    <div class="profile-info">
-      <h2>Yongsoo Joo (주용수)</h2>
-      <p class="title">Professor, School of Software, Kookmin University</p>
-      <p class="education">B.S., Seoul National University, 2000</p>
-      <p class="education">M.S., Seoul National University, 2002</p>
-      <p class="education">Ph.D., Seoul National University, 2007</p>
+  <div class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">M&amp;S Lab &middot; School of Software, Kookmin University</p>
+      <h2>Building high-performance, energy-efficient, and secure storage systems</h2>
+      <p class="hero-lead">
+        We study the system software that sits between applications and modern storage devices &mdash;
+        from SSD firmware to the operating system kernel and the virtualization layer.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="research.html">Explore Research</a>
+        <a class="btn btn-outline" href="members.html">Meet the Team</a>
+      </div>
     </div>
   </div>
 
-  <section>
-    <h2>Research Interests</h2>
-    <ul>
-      <li>I/O completion optimization for high-performance storage devices</li>
-      <li>Virtualized I/O and storage performance</li>
-      <li>Storage security (ransomware defense)</li>
-      <li>SSD/NVM performance optimization and application launch acceleration</li>
-      <li>Energy-efficient memory and storage systems</li>
-    </ul>
-  </section>
+  <div class="container">
 
-  <section>
-    <h2>Resources</h2>
-    <ul class="links-list">
-      <li><a href="https://scholar.google.com/citations?hl=en&user=xazWDIUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar Citations</a></li>
-      <li><a href="ysjoo_CV.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae (CV)</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>About the Lab</h2>
+      <p>
+        The <strong>Memory &amp; Storage Laboratory (M&amp;S Lab)</strong> at Kookmin University investigates how
+        operating systems, device firmware, and hardware should cooperate to get the most out of modern
+        memory and storage devices. Our central theme is <em>I/O completion that adapts dynamically to
+        workload characteristics</em>: deciding, at run time, whether an I/O should be completed by polling,
+        by an interrupt, or by an adaptive hybrid of the two.
+      </p>
+      <p>
+        Our work spans the full I/O stack &mdash; SSD firmware, block layer, kernel I/O path, and virtualized
+        storage &mdash; and reaches beyond performance to energy efficiency and security. Results have appeared
+        at top-tier venues including <strong>USENIX FAST</strong>, <strong>ACM HotStorage</strong>,
+        <strong>HPCA</strong>, <strong>DAC</strong>, and <strong>IEEE TC/TCAD</strong>, and have been
+        transferred into granted US and Korean patents.
+      </p>
+    </section>
 
-  <section>
-    <h2>Institutional Links</h2>
-    <ul class="links-list">
-      <li><a href="https://cs.kookmin.ac.kr/" target="_blank" rel="noopener noreferrer">School of Computer Science, Kookmin University</a></li>
-      <li><a href="https://cs.kookmin.ac.kr/en/" target="_blank" rel="noopener noreferrer">School of Computer Science, Kookmin University (English)</a></li>
-      <li><a href="https://eslab.ewha.ac.kr/" target="_blank" rel="noopener noreferrer">Embedded Software Laboratory, Ewha Womans University</a></li>
-      <li><a href="https://rtcl.eecs.umich.edu/" target="_blank" rel="noopener noreferrer">Real-Time Computing Laboratory, University of Michigan</a></li>
-      <li><a href="https://mdl.cse.psu.edu/" target="_blank" rel="noopener noreferrer">Microsystems Design Laboratory, Penn State University</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Research Areas</h2>
+      <div class="card-grid">
+        <div class="topic-card">
+          <h3>I/O Completion Optimization</h3>
+          <p>Polling, interrupts, and adaptive hybrid polling for high-performance SSDs, switched dynamically under CPU contention.</p>
+        </div>
+        <div class="topic-card">
+          <h3>Virtualized I/O &amp; Storage</h3>
+          <p>Expanding the polled I/O path of the Linux kernel so that virtual machines get low-latency storage access.</p>
+        </div>
+        <div class="topic-card">
+          <h3>Storage Security</h3>
+          <p>Ransomware defense inside the SSD: memory-efficient overwrite detection implemented at the firmware level.</p>
+        </div>
+        <div class="topic-card">
+          <h3>SSD/NVM Performance</h3>
+          <p>Exploiting device-internal parallelism and nonvolatile memory to accelerate application launch and data access.</p>
+        </div>
+        <div class="topic-card">
+          <h3>Energy-Efficient Memory</h3>
+          <p>Co-optimizing performance, energy, and device lifetime across PCM, STT-RAM, flash, and DRAM based systems.</p>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <dl class="contact-grid">
-      <dt>Address</dt>
-      <dd>77, Jeongneung-ro, Seongbuk-gu, Seoul, Korea 02707</dd>
-      <dt>Office</dt>
-      <dd>+82-2-910-5429</dd>
-      <dt>Email</dt>
-      <dd>ysjoo at kookmin.ac.kr</dd>
-    </dl>
-  </section>
+    <section>
+      <h2>News &amp; Highlights</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">2026</span>
+          <span>
+            <strong>DPAS</strong> is published at <strong>USENIX FAST 2026</strong> &mdash; a dynamic I/O completion
+            method achieving a 9% YCSB performance improvement on a 3D XPoint SSD.
+            [<a href="https://www.usenix.org/conference/fast26/presentation/seo" target="_blank" rel="noopener noreferrer">Paper</a>]
+            [<a href="https://github.com/DongDongJu/DPAS_FAST26" target="_blank" rel="noopener noreferrer">Artifact</a>]
+            [<a href="demo.html">Demo</a>]
+          </span>
+        </li>
+        <li>
+          <span class="news-date">2026</span>
+          <span>Korean Patent 10-2919645 on hybrid interrupt processing granted; US Patent Application 2026/0030187 on I/O completion processing published.</span>
+        </li>
+        <li>
+          <span class="news-date">2024</span>
+          <span>
+            Work on expanding the polled I/O path of Linux for virtualized environments presented at
+            <strong>ACM HotStorage 2024</strong>.
+            [<a href="https://doi.org/10.1145/3655038.3665944" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </span>
+        </li>
+        <li>
+          <span class="news-date">2023</span>
+          <span>
+            US Patent 11,768,532 on I/O latency tracking for storage devices granted.
+            [<a href="https://patents.google.com/patent/US11768532B2/en" target="_blank" rel="noopener noreferrer">Patent</a>]
+          </span>
+        </li>
+        <li>
+          <span class="news-date">2023</span>
+          <span>
+            Ransomware-proof SSD design with memory-efficient overwrite detection published in
+            <strong>IEICE Transactions on Information and Systems</strong>.
+            [<a href="https://doi.org/10.1587/transinf.2023EDL8019" target="_blank" rel="noopener noreferrer">Paper</a>]
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Join Us</h2>
+      <div class="callout">
+        <p>
+          <strong>We are recruiting.</strong> M&amp;S Lab welcomes graduate and undergraduate students who enjoy
+          operating systems, storage systems, and computer architecture &mdash; and who want to see their ideas run
+          on real kernels and real devices.
+        </p>
+        <p style="margin-top:0.6rem;">
+          If you are interested, email <a href="mailto:ysjoo@kookmin.ac.kr">ysjoo@kookmin.ac.kr</a>
+          with a short introduction and your transcript.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <dl class="contact-grid">
+        <dt>Lab</dt>
+        <dd>Memory &amp; Storage Laboratory (M&amp;S Lab), School of Software, Kookmin University</dd>
+        <dt>Office</dt>
+        <dd>Mirae Hall, Room 619</dd>
+        <dt>Address</dt>
+        <dd>77, Jeongneung-ro, Seongbuk-gu, Seoul, Korea 02707</dd>
+        <dt>Phone</dt>
+        <dd>+82-2-910-5429</dd>
+        <dt>Email</dt>
+        <dd>ysjoo at kookmin.ac.kr</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Related Links</h2>
+      <ul class="links-list">
+        <li><a href="https://cs.kookmin.ac.kr/" target="_blank" rel="noopener noreferrer">School of Computer Science, Kookmin University</a></li>
+        <li><a href="https://gsai.kookmin.ac.kr/faculty/yongsoo-joo/" target="_blank" rel="noopener noreferrer">Graduate School of AI, Kookmin University</a></li>
+      </ul>
+    </section>
+
+  </div>
 
 </main>
 
 <footer>
   <div class="container">
-    &copy; 2026 Yongsoo Joo. All rights reserved.
+    &copy; 2026 Memory &amp; Storage Laboratory, Kookmin University. All rights reserved.
   </div>
 </footer>
 
